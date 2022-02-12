@@ -1,0 +1,33 @@
+{{#if listaProductos.length }}
+        <h3 class="alert alert-danger">no se encontraron datos</h1>
+            {{else}}
+    <div class="table-responsive">
+        <h2 style="color:crimson; font-weight: bold;">Registros cargados</h2>
+        <table class="table table-dark">
+            <tr style="color: yellow;">
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Genero</th>
+                <th>Celular</th>
+            </tr>
+            <tbody>
+                {{#each listaProductos}}
+                <tr>
+                    <td class="nombre">
+                        {{this.name}}
+                    </td>
+                    <td class="edad">
+                        {{this.edad}}
+                    </td>
+                    <td class="genero">
+                        {{this.genero}}
+                    </td>
+                    <td class="celular">
+                        {{this.celular}}
+                    </td>
+                </tr>
+                {{/each}}
+                </tbody>
+        </table>
+    </div>
+    {{/if}}
